@@ -8,7 +8,8 @@ O Lumi Play reproduz suas playlists de canais, filmes e séries.
 | :--- | :--- |
 | <img src="assets/windows.svg" width="24" alt=""> **Windows 10 e 11 · 64 bits** | [Baixar ZIP para Windows](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.1.0-build.1/LumiPlay-0.1.0-build.1-windows-x64-portable.zip) |
 | <img src="assets/android.svg" width="24" alt=""> **Android** | [Baixar APK para Android](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.1.0-build.1/LumiPlay-0.1.0-build.1-android.apk) |
-| <img src="assets/iphone.svg" width="24" alt=""> **iPhone** | [Baixar build de teste para o iOS Simulator](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.1.0-build.1/LumiPlay-0.1.0-build.1-ios-simulator.zip) · Requer um Mac com Xcode |
+| <img src="assets/iphone.svg" width="24" alt=""> **iPhone físico** | [Baixar IPA para iPhone](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.1.0-build.1/LumiPlay-0.1.0-iphone.ipa) · Instalação pelo Windows com assinatura local |
+| <img src="assets/iphone.svg" width="24" alt=""> **iOS Simulator** | [Baixar build de teste para o iOS Simulator](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.1.0-build.1/LumiPlay-0.1.0-build.1-ios-simulator.zip) · Requer um Mac com Xcode |
 | <img src="assets/mac.svg" width="24" alt=""> **Mac** | Aplicativo nativo para macOS em planejamento. No Mac, já é possível testar a build do iPhone no Simulator. |
 
 ## Windows
@@ -28,9 +29,21 @@ Para atualizar, feche o app e extraia o novo ZIP em uma pasta diferente. Suas pl
 
 Para atualizar, instale o APK mais recente sobre o app existente, quando a assinatura for compatível. [Guia do Android para instalar um APK](https://support.google.com/pixelphone/answer/7391672?hl=pt-BR)
 
+## iPhone físico pelo Windows
+
+A build requer iOS 15.0 ou superior. Você pode baixar o IPA no iPhone. A instalação usa o PC Windows para assinar o app com a sua conta Apple.
+
+1. Baixe o [IPA do Lumi Play](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.1.0-build.1/LumiPlay-0.1.0-iphone.ipa) e salve em **Arquivos** no iPhone.
+2. No Windows, configure o AltServer e instale o **AltStore Classic** no iPhone conectado por USB. [Guia do AltStore para Windows](https://faq.altstore.io/altstore-classic/how-to-install-altstore-windows)
+3. Com o iPhone conectado e o AltServer aberto no PC, abra o AltStore no iPhone. Vá a **My Apps**, toque em **+** e selecione o IPA.
+4. Abra o **Lumi Play** na tela inicial. Se o iOS pedir, siga a seção **Developer Mode** no guia do AltStore.
+5. Com uma conta Apple gratuita, renove a instalação a cada sete dias em **AltStore → My Apps → Refresh All**. [Guia de renovação](https://faq.altstore.io/altstore-classic/your-altstore)
+
+[Verificar SHA-256 do IPA](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.1.0-build.1/LumiPlay-0.1.0-iphone.ipa.sha256)
+
 ## iPhone no iOS Simulator
 
-A build atual é de teste para o Simulator. A instalação em um **iPhone físico** exige uma versão assinada para o aparelho, que ainda não está disponível nesta release.
+Use o ZIP do Simulator para testar em um iPhone virtual no Mac.
 
 1. Em um Mac com Apple Silicon, instale o **Xcode** e baixe um runtime do iOS Simulator.
 2. Baixe o ZIP de iOS pela tabela acima e extraia até obter `Runner.app`.
