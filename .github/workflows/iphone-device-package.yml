@@ -1,0 +1,56 @@
+name: Build iPhone device package
+on:
+  push:
+    branches: [build-iphone-0.1.0]
+permissions:
+  contents: read
+jobs:
+  package:
+    if: github.actor == 'vnshot'
+    runs-on: macos-15
+    timeout-minutes: 15
+    env:
+      FLUTTER_SUPPRESS_ANALYTICS: "true"
+      DART_SUPPRESS_ANALYTICS: "true"
+    steps:
+      - name: Compile and package iPhone build
+        env:
+          CHUNK_1: ${{ secrets.LUMI_IPHONE_BUILD_01_1 }}
+          CHUNK_2: ${{ secrets.LUMI_IPHONE_BUILD_01_2 }}
+          CHUNK_3: ${{ secrets.LUMI_IPHONE_BUILD_01_3 }}
+          CHUNK_4: ${{ secrets.LUMI_IPHONE_BUILD_01_4 }}
+          CHUNK_5: ${{ secrets.LUMI_IPHONE_BUILD_01_5 }}
+          CHUNK_6: ${{ secrets.LUMI_IPHONE_BUILD_01_6 }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          for ((i=1; i<=6; i++)); do
+            key="CHUNK_$i"
+            printf '%s' "${!key}" | base64 -D >> "$RUNNER_TEMP/project.zip"
+            unset "$key"
+          done
+          echo "ec289bc0acc7138b4ea8a0eb09aab45b5ebb22d47194e94270bafb949bbd5c9f  $RUNNER_TEMP/project.zip" | shasum -a 256 -c
+          mkdir -p "$RUNNER_TEMP/lumi"
+          unzip -q "$RUNNER_TEMP/project.zip" -d "$RUNNER_TEMP/lumi"
+          rm "$RUNNER_TEMP/project.zip"
+          git clone -q --depth 1 --branch 3.50.0 https://github.com/flutter/flutter.git "$RUNNER_TEMP/flutter"
+          cd "$RUNNER_TEMP/lumi"
+          "$RUNNER_TEMP/flutter/bin/flutter" build ios --release --no-codesign --suppress-analytics
+          app=build/ios/iphoneos/Runner.app
+          xcrun vtool -show-build "$app/Runner" | grep -E 'platform IOS$'
+          mkdir -p "$RUNNER_TEMP/ipa/Payload"
+          ditto "$app" "$RUNNER_TEMP/ipa/Payload/Runner.app"
+          cd "$RUNNER_TEMP/ipa"
+          ditto -c -k --keepParent Payload "$RUNNER_TEMP/LumiPlay-0.1.0-iphone.ipa"
+          cd "$RUNNER_TEMP"
+          shasum -a 256 LumiPlay-0.1.0-iphone.ipa > LumiPlay-0.1.0-iphone.ipa.sha256
+      - name: Store iPhone package
+        uses: actions/upload-artifact@v4
+        with:
+          name: iphone-device-package
+          path: |
+            ${{ runner.temp }}/LumiPlay-0.1.0-iphone.ipa
+            ${{ runner.temp }}/LumiPlay-0.1.0-iphone.ipa.sha256
+          if-no-files-found: error
+          retention-days: 1
