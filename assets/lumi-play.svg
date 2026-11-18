@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="190" viewBox="0 0 880 190">
+<defs><linearGradient id="bg"><stop stop-color="#142c29"/><stop offset="1" stop-color="#204740"/></linearGradient></defs>
+<rect width="880" height="190" rx="24" fill="url(#bg)"/>
+<circle cx="100" cy="95" r="43" fill="#97e5be"/>
+<path d="M90 76v38l31-19z" fill="#14352e"/>
+<text x="169" y="88" font-family="Segoe UI, sans-serif" font-size="49" font-weight="700" fill="#fff">Lumi Play</text>
+<text x="171" y="125" font-family="Segoe UI, sans-serif" font-size="21" fill="#c8e7da">Downloads oficiais</text>
+</svg>
