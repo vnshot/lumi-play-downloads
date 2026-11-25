@@ -7,7 +7,8 @@ O Lumi Play reproduz suas playlists de canais, filmes e séries.
 | Plataforma | Download |
 | :--- | :--- |
 | <img src="assets/windows.svg" width="24" alt=""> **Windows 10 e 11 · 64 bits** | [Baixar ZIP para Windows](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.1.0-build.1/LumiPlay-0.1.0-build.1-windows-x64-portable.zip) |
-| <img src="assets/android.svg" width="24" alt=""> **Android** | [Baixar APK para Android](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.1.0-build.1/LumiPlay-0.1.0-build.1-android.apk) |
+| <img src="assets/android.svg" width="24" alt=""> **Android celular** | [Baixar APK para celular](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.1.0-build.1/LumiPlay-0.1.0-build.1-android.apk) |
+| <img src="assets/android.svg" width="24" alt=""> **Android TV e TV Box** | [Baixar APK para Android TV](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.1.0-build.1/LumiPlay-0.1.0-build.1-android.apk) |
 | <img src="assets/iphone.svg" width="24" alt=""> **iPhone físico** | [Baixar IPA para iPhone](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.1.0-build.1/LumiPlay-0.1.0-iphone.ipa) · Instalação pelo Windows com assinatura local |
 | <img src="assets/iphone.svg" width="24" alt=""> **iOS Simulator** | [Baixar build de teste para o iOS Simulator](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.1.0-build.1/LumiPlay-0.1.0-build.1-ios-simulator.zip) · Requer um Mac com Xcode |
 | <img src="assets/mac.svg" width="24" alt=""> **Mac** | Aplicativo nativo para macOS em planejamento. No Mac, já é possível testar a build do iPhone no Simulator. |
@@ -21,6 +22,8 @@ O Lumi Play reproduz suas playlists de canais, filmes e séries.
 Para atualizar, feche o app e extraia o novo ZIP em uma pasta diferente. Suas playlists e preferências ficam no perfil do Windows.
 
 ## Android
+
+O APK listado para celular e Android TV ? o mesmo pacote universal. Na TV, instale a op??o **Android TV e TV Box**; a navega??o usa o controle remoto.
 
 1. No aparelho, baixe o APK pela tabela acima.
 2. Abra o arquivo em **Downloads**.
