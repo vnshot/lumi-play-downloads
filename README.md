@@ -6,7 +6,7 @@ O Lumi Play reproduz suas playlists de canais, filmes e séries.
 
 | Plataforma | Download |
 | :--- | :--- |
-| <img src="assets/windows.svg" width="24" alt=""> **Windows 10 e 11 · 64 bits** | [Baixar ZIP para Windows](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.1.0-build.1/LumiPlay-0.1.0-build.1-windows-x64-portable.zip) |
+| <img src="assets/windows.svg" width="24" alt=""> **Windows 10 e 11 · 64 bits** | [Baixar ZIP para Windows](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.2.4-build.6/LumiPlay-0.2.4-build.6-windows-x64-portable.zip) |
 | <img src="assets/android.svg" width="24" alt=""> **Android celular** | [Baixar APK para celular](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.2.4-build.6/LumiPlay-0.2.4-build.6-android.apk) |
 | <img src="assets/android.svg" width="24" alt=""> **Android TV e TV Box** | [Baixar APK para Android TV](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.2.4-build.6/LumiPlay-0.2.4-build.6-android.apk) |
 | <img src="assets/iphone.svg" width="24" alt=""> **iPhone físico** | [Baixar IPA para iPhone](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.1.0-build.1/LumiPlay-0.1.0-iphone.ipa) · Instalação pelo Windows com assinatura local |
@@ -15,6 +15,8 @@ O Lumi Play reproduz suas playlists de canais, filmes e séries.
 
 ## Windows
 
+SHA-256 do ZIP Windows: [verificar](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.2.4-build.6/LumiPlay-0.2.4-build.6-windows-x64-portable.zip.sha256).
+
 1. Baixe o ZIP portátil pela tabela acima.
 2. Clique com o botão direito no ZIP, escolha **Extrair tudo** e abra a pasta extraída.
 3. Execute `lumi_play.exe` dentro dessa pasta. Mantenha as DLLs e os demais arquivos ao lado do executável.
@@ -22,6 +24,8 @@ O Lumi Play reproduz suas playlists de canais, filmes e séries.
 Para atualizar, feche o app e extraia o novo ZIP em uma pasta diferente. Suas playlists e preferências ficam no perfil do Windows.
 
 ## Android
+
+SHA-256 do APK Android: [verificar](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.2.4-build.6/LumiPlay-0.2.4-build.6-android.apk.sha256).
 
 O APK listado para celular e Android TV ? o mesmo pacote universal. Na TV, instale a op??o **Android TV e TV Box**; a navega??o usa o controle remoto. [Verificar SHA-256](https://github.com/vnshot/lumi-play-downloads/releases/download/v0.2.4-build.6/LumiPlay-0.2.4-build.6-android.apk.sha256).
 
